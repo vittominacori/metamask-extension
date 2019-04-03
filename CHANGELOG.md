@@ -2,6 +2,36 @@
 
 ## Current Develop Branch
 
+## 6.3.1 Fri Mar 26 2019
+
+- [#6353](https://github.com/MetaMask/metamask-extension/pull/6353): Open restore vault in full screen when clicked from popup
+- [#6372](https://github.com/MetaMask/metamask-extension/pull/6372): Prevents duplicates of account addresses from showing in send screen "To" dropdown
+- [#6374](https://github.com/MetaMask/metamask-extension/pull/6374): Ensures users are placed on correct confirm screens even when registry service fails
+
+## 6.3.0 Mon Mar 25 2019
+
+- [#6300](https://github.com/MetaMask/metamask-extension/pull/6300): Gas chart hidden on custom networks
+- [#6301](https://github.com/MetaMask/metamask-extension/pull/6301): Fix gas fee in the submitted step of the transaction details activity log
+- [#6302](https://github.com/MetaMask/metamask-extension/pull/6302): Replaces the coinbase link in the deposit modal with one for wyre
+- [#6307](https://github.com/MetaMask/metamask-extension/pull/6307): Centre the notification in the current window
+- [#6312](https://github.com/MetaMask/metamask-extension/pull/6312): Fixes popups not showing when screen size is odd
+- [#6326](https://github.com/MetaMask/metamask-extension/pull/6326): Fix oversized loading overlay on gas customization modal. 
+- [#6330](https://github.com/MetaMask/metamask-extension/pull/6330): Stop reloading dapps on network change allowing dapps to decide if it should refresh or not
+- [#6332](https://github.com/MetaMask/metamask-extension/pull/6332): Enable mobile sync
+- [#6333](https://github.com/MetaMask/metamask-extension/pull/6333): Redesign of the settings screen
+- [#6340](https://github.com/MetaMask/metamask-extension/pull/6340): Cancel transactions and signature requests on the closing of notification windows
+- [#6341](https://github.com/MetaMask/metamask-extension/pull/6341): Disable transaction "Cancel" button when balance is insufficient
+- [#6347](https://github.com/MetaMask/metamask-extension/pull/6347): Enable privacy mode by default for first time users
+
+## 6.2.2 Tue Mar 12 2019
+
+- [#6271](https://github.com/MetaMask/metamask-extension/pull/6271): Centre all notification popups
+- [#6268](https://github.com/MetaMask/metamask-extension/pull/6268): Improve Korean translations
+- [#6279](https://github.com/MetaMask/metamask-extension/pull/6279): Nonmultiple notifications for batch txs
+- [#6280](https://github.com/MetaMask/metamask-extension/pull/6280): No longer check network when validating checksum addresses
+
+## 6.2.1 Wed Mar 06 2019
+
 ## 6.2.0 Tue Mar 05 2019
 - [#6192](https://github.com/MetaMask/metamask-extension/pull/6192): Improves design and UX of onboarding flow
 - [#6195](https://github.com/MetaMask/metamask-extension/pull/6195): Fixes gas estimation when sending to contracts

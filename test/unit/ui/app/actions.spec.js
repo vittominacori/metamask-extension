@@ -16,7 +16,7 @@ const { createTestProviderTools } = require('../../../stub/provider')
 const provider = createTestProviderTools({ scaffold: {}}).provider
 
 const enLocale = require('../../../../app/_locales/en/messages.json')
-const actions = require('../../../../ui/app/actions')
+const actions = require('../../../../ui/app/store/actions')
 const MetaMaskController = require('../../../../app/scripts/metamask-controller')
 
 const firstTimeState = require('../../../unit/localhostState')
@@ -1305,6 +1305,29 @@ describe('Actions', () => {
         .catch(() => {
           assert.deepEqual(store.getActions(), expectedActions)
         })
+    })
+  })
+
+  describe('#setCompletedOnboarding', () => {
+    let markAllNoticesReadSpy, completeOnboardingSpy
+
+    beforeEach(() => {
+      markAllNoticesReadSpy = sinon.stub(background, 'markAllNoticesRead')
+      markAllNoticesReadSpy.callsFake(cb => cb())
+      completeOnboardingSpy = sinon.stub(background, 'completeOnboarding')
+      completeOnboardingSpy.callsFake(cb => cb())
+    })
+
+    after(() => {
+      markAllNoticesReadSpy.restore()
+      completeOnboardingSpy.restore()
+    })
+
+    it('completing onboarding marks all notices as read', async () => {
+      const store = mockStore()
+      await store.dispatch(actions.setCompletedOnboarding())
+      assert.equal(markAllNoticesReadSpy.callCount, 1)
+      assert.equal(completeOnboardingSpy.callCount, 1)
     })
   })
 
